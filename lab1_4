@@ -1,0 +1,26 @@
+def transpose_matrix(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+    transpose = [[matrix[i][j] for i in range(rows)] for j in range(cols)]
+    return transpose
+
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+
+
+print("Enter the matrix row by row, with elements separated by spaces:")
+matrix = []
+for i in range(rows):
+    row = list(map(int, input(f"Row {i+1}: ").split()))
+    if len(row) != cols:
+        print("Error: Incorrect number of elements in the row.")
+        exit()
+    matrix.append(row)
+
+
+transposed = transpose_matrix(matrix)
+
+
+print("\nTransposed Matrix:")
+for row in transposed:
+    print(" ".join(map(str, row)))
