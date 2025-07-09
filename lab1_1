@@ -1,0 +1,22 @@
+string = str(input("Enter the string:"))
+
+print(string)
+
+i = 0
+countv = 0
+countc = 0
+
+for i in range(len(string)):
+    if string[i] in "aeiouAEIOU":
+    
+        countv = countv + 1
+    else : 
+        countc = countc + 1
+    i = i+1
+
+
+
+print("Number vowels:",countv)
+print("Number consonants:",countc)
+
+
